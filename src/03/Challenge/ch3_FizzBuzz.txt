@@ -7,23 +7,6 @@
 
 #include <iostream>
 
-void fizzbuzz(int n, int f, int b) {
-    bool mf, mb; // track multiples of f and b
-
-    for (int i=1; i <= n; i++) {
-        mf = ((i % f) == 0);
-        mb = ((i % b) == 0);
-
-        if(!mf && !mb) { 
-            std::cout << i;
-        } else {
-            if (mf) { std::cout << "Fizz"; }
-            if (mb) { std::cout << "Buzz"; }
-        }
-        std::cout << std::endl;
-    }
-}
-
 // FizzBuzz, main()
 // Summary: This application runs on the main function.
 int main(){
@@ -33,7 +16,6 @@ int main(){
     std::cin >> n;
 
     // Write your code here
-    fizzbuzz(n, 3, 5);
     
     std::cout << std::endl << std::flush;
     return 0;
