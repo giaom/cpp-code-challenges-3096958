@@ -40,23 +40,23 @@ bool is_bitonic(const std::vector<int> &v){
     if (v[i] < v[i+1]) { // if rising 
         rising = true;
         
-        while ((i < (count-1)) && v[i] <= v[i+1]) {
-            i++;
+        while ((i < (count-1)) && v[i] <= v[i+1]) { 
+            i++; // increment while rising 
         }
     } else {
     // if (v[i] > v[i+1]) { // if descending 
         rising = false;
         
         while ((i < (count-1)) && v[i] >= v[i+1]) {
-            i++;
+            i++; // increment while descending 
         }
     }
     // reached end of vector, only one slope. monotopnic
     if (i == (count-1)) {return true;}
 
     // SECOND SLOPE: ------------------------
-    // if (v[i] < v[i+1]) { // if rising 
-    if (!rising) { // was descending, now rising 
+    if (v[i] < v[i+1]) { // if rising 
+    // if (!rising) { // was descending, now rising 
         rising = true;
         
         while ((i < (count-1)) && v[i] <= v[i+1]) {
